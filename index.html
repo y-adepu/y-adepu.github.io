@@ -3,10 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Yellappa Adepu | Technolgoy Leader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
+            text-align: center;
+        }
+        .hero {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
+            color: black;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: gray;
+            margin: 20px auto;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .nav a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            color: black;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #007bff;
+            color: white;
+        }
+        footer {
+            padding: 20px;
+            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
+            color: black;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is my personal webpage hosted on GitHub Pages!</p>
+    <div class="hero">
+        <h1>Yellappa Adepu</h1>
+        <p>Technology Leader</p>
+    </div>
+    <div class="divider"></div>
+    <nav class="nav">
+        <a href="#about">Intro</a>
+        <a href="#expertise">Competencies</a>
+            <a href="#projects">Work</a>
+        <a href="#education">Education</a>
+    
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="divider"></div>
+    <section id="about">
+        <h2>Introduction</h2>
+        <p>Transformational technology leader with a proven track record of driving digital innovation, aligning IT strategies with business objectives, and accelerating growth across healthcare, financial services, retail, and public sectors. With over two decades of experience, I excel in leading high-impact initiatives, optimizing IT operations, and orchestrating cross-functional teams to deliver sustainable value and operational excellence.
+
+As a recognized thought leader and trusted advisor to C-suite executives, I bring extensive expertise in application development, modernization, AI, data analytics, and cloud technologies, underpinned by a strategic, results-oriented approach to complex problem-solving. I design and implement technology roadmaps that enhance competitive positioning, drive revenue optimization, and enable resilient enterprise transformation.
+
+Passionate about cultivating high-performance teams and delivering innovative, scalable solutions that exceed business goals, Gained a deep understanding of IT management, product strategy, and lifecycle management to provide actionable insights that fuel growth and operational efficiencies.</p>
+    </section>
+    <section id="expertise">
+        <h2>Competencies</h2>
+        <ul>
+            <li>IT Strategy, Technology Roadmap Development & Execution</li>
+            <li>Digital Transformation & Innovation</li>
+            <li>People Leadership and Management</li>
+            <li>Enterprise Architecture and Cloud Adoption</li>
+            <li>Application Modernization, Gen AI, AI/ML, Data Analytics</li>
+        </ul>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><a href="#">MBA, University of Florida</a></li>
+            <li><a href="#">Bachelor of Engineering, University College of Engineering, Osmania University</a></li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Publications</h2>
+        <ul>
+            <li><a href="#">1.</li>
+            <li><a href="#">L2.</li>
+        </ul>
+    </section>
+    <footer id="contact">
+        <h2>Contact</h2>
+        <p>Let's connect! Reach out on <a href="https://www.linkedin.com/in/yadepu/" target="_blank">LinkedIn</a></p>
+    </footer>
 </body>
 </html>

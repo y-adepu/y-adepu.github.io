@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yellappa Adepu | Technolgoy Leader</title>
+    <title>Yellappa Adepu</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-     <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,18 +14,6 @@
             transition: background 0.3s, color 0.3s;
             background: linear-gradient(to bottom, #a0d8ef, #ffffff);
             text-align: center;
-        }
-        .hero {
-            padding: 40px 20px;
-            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
-            color: black;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 10px 0;
-        }
-        .hero p {
-            font-size: 1.2rem;
         }
         .divider {
             width: 80%;
@@ -58,22 +46,9 @@
             max-width: 800px;
             margin: auto;
         }
-        footer {
-            padding: 20px;
-            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
-            color: black;
-            margin-top: 40px;
-        }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
             .nav {
-                flex-direction: column;
-                align-items: center;
+                flex-wrap: wrap;
             }
             section {
                 padding: 15px;
@@ -82,7 +57,7 @@
     </style>
 </head>
 <body>
-    <div class="hero">
+    <div>
         <h1>Yellappa Adepu</h1>
         <p>Technology Leader</p>
     </div>
@@ -90,16 +65,15 @@
     <nav class="nav">
         <a href="#about">Intro</a>
         <a href="#expertise">Competencies</a>
-            <a href="#projects">Work</a>
+        <a href="#projects">Work</a>
         <a href="#education">Education</a>
-    
         <a href="#contact">Contact</a>
     </nav>
     <div class="divider"></div>
     <section id="about">
         <h2>Introduction</h2>
         <p>Transformational technology leader with a proven track record of driving digital innovation, aligning IT strategies with business objectives, and accelerating growth across healthcare, financial services, retail, and public sectors. With over two decades of experience, I excel in leading high-impact initiatives, optimizing IT operations, and orchestrating cross-functional teams to deliver sustainable value and operational excellence.
-
+            
 As a recognized thought leader and trusted advisor to C-suite executives, I bring extensive expertise in application development, modernization, AI, data analytics, and cloud technologies, underpinned by a strategic, results-oriented approach to complex problem-solving. I design and implement technology roadmaps that enhance competitive positioning, drive revenue optimization, and enable resilient enterprise transformation.
 
 Passionate about cultivating high-performance teams and delivering innovative, scalable solutions that exceed business goals, Gained a deep understanding of IT management, product strategy, and lifecycle management to provide actionable insights that fuel growth and operational efficiencies.</p>
@@ -128,9 +102,9 @@ Passionate about cultivating high-performance teams and delivering innovative, s
             <li><a href="#">L2.</li>
         </ul>
     </section>
-    <footer id="contact">
+   <div class="divider"></div>
         <h2>Contact</h2>
         <p>Let's connect! Reach out on <a href="https://www.linkedin.com/in/yadepu/" target="_blank">LinkedIn</a></p>
-    </footer>
+    </div>
 </body>
 </html>

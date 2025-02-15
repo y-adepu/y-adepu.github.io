@@ -7,106 +7,6 @@
     <title>Yellappa Adepu</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: background 0.3s, color 0.3s;
-            background: linear-gradient(to bottom, #a0d8ef, #ffffff);
-        }
-
-        .divider {
-            width: 80%;
-            height: 1px;
-            background: gray;
-            margin: 10px auto;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-            flex-wrap: nowrap;
-        }
-
-        .nav a {
-            text-decoration: none;
-            padding: 10px 15px;
-            border: 1px solid gray;
-            border-radius: 5px;
-            color: black;
-            transition: background 0.3s;
-            white-space: nowrap;
-        }
-
-        .nav a:hover {
-            background: #007bff;
-            color: white;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-            padding: 10px;
-        }
-
-        .column {
-            flex: 1;
-        }
-
-        .split-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .vertical-divider {
-            width: 1px;
-            background: gray;
-            height: 70%;
-            display: flex;
-            transform: translateX(-50%);
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        section {
-            padding: 10px;
-            max-width: 800px;
-            margin: auto;
-            bottom: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                overflow-x: auto;
-            }
-
-            .vertical-divider {
-                display: none; /* Hide it on smaller screens for better layout */
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            section {
-                padding: 15px;
-            }
-}
-
-    </style>
 </head>
 
 <body>
@@ -118,7 +18,7 @@
             <input type="checkbox" id="darkModeToggle">
             <span class="slider round"></span>
         </label>
-    </div>    
+    </div>
     <div class="divider"></div>
     <nav class="nav">
         <a href="#about" aria-label="About"><strong>About</strong></a>
@@ -127,7 +27,7 @@
         <a href="#education" aria-label="Education"><strong>Education</strong></a>
         <a href="#contact" aria-label="Contact"><strong>Contact</strong></a>
     </nav>
-    
+
     <div class="divider"></div>
     <div class="container">
         <div class="column">
@@ -176,15 +76,68 @@
         </div>
     </div>
     <div class="divider"></div>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Developed AI-powered chatbots for customer engagement</li>
-            <li>Designed and implemented cloud migration strategies</li>
-            <li>Built data pipelines for real-time analytics</li>
-        </ul>
-    </section>
-    
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-circle">
+                    <span></span>
+                    <h3>Developer</h3>
+                </div>
+                <ul class="timeline-details hidden">
+                    <li>.</li>
+                    <li>.</li>
+                </ul>
+            </div>
+            <div class="arrow"></div>
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-circle">
+                    <span></span>
+                    <h3>Architect</h3>
+                </div>
+                <ul class="timeline-details hidden">
+                    <li>.</li>
+                    <li>.</li>
+                </ul>
+            </div>
+            <div class="arrow"></div>
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-circle">
+                    <span></span>
+                    <h3>IT Manager</h3>
+                </div>
+                <ul class="timeline-details hidden">
+                    <li>.</li>
+                    <li>.</li>
+                </ul>
+            </div>
+            <div class="arrow"></div>
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-circle">
+                    <span></span>
+                    <h3>Sr IT Manager</h3>
+                </div>
+                <ul class="timeline-details hidden">
+                    <li><strong>.</li>
+                    <li><strong>.</li>
+                </ul>
+            </div>
+            <div class="arrow"></div>
+            <div class="timeline-item" onclick="toggleDetails(this)">
+                <div class="timeline-circle">
+                    <span></span>
+                    <h3>Director</h3>
+                </div>
+                <ul class="timeline-details hidden">
+                    <li><strong>.</li>
+                    <li><strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
     <div class="divider"></div>
     <section id="contact">
         <div class="contact-container">
@@ -198,4 +151,5 @@
     </section>
     </div>
 </body>
+
 </html>

@@ -6,7 +6,7 @@
     <title>Yellappa Adepu</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <style>
+     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -41,6 +41,23 @@
             background: #007bff;
             color: white;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+        .split-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
         section {
             padding: 20px;
             max-width: 800px;
@@ -49,6 +66,10 @@
         @media (max-width: 768px) {
             .nav {
                 flex-wrap: wrap;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
             }
             section {
                 padding: 15px;
@@ -69,7 +90,9 @@
         <a href="#contact">Contact</a>
     </nav>
     <div class="divider"></div>
-    <section id="about">
+    <div class="container">
+        <div class="column">
+            <section id="about">
         <h2>About</h2>
         <p>Transformational technology leader with a proven track record of driving digital innovation, aligning IT strategies with business objectives, and accelerating growth across healthcare, financial services, retail, and public sectors. With over two decades of experience, I excel in leading high-impact initiatives, optimizing IT operations, and orchestrating cross-functional teams to deliver sustainable value and operational excellence.
             
@@ -77,23 +100,28 @@ As a recognized thought leader and trusted advisor to C-suite executives, I brin
 
 Passionate about cultivating high-performance teams and delivering innovative, scalable solutions that exceed business goals, Gained a deep understanding of IT management, product strategy, and lifecycle management to provide actionable insights that fuel growth and operational efficiencies.</p>
     </section>
-    <section id="expertise">
-        <h2>Competencies</h2>
-        <div>
+        </div>
+         <div class="column split-column">
+            <section id="expertise">
+                <h2>Competencies</h2>
+                <div>
             <p>IT Strategy, Technology Roadmap Development & Execution</p>
             <p>Digital Transformation & Innovation</p>
             <p>People Leadership and Management</p>
             <p>Enterprise Architecture and Cloud Adoption</p>
             <p>Application Modernization, Gen AI, AI/ML, Data Analytics</p->
         </div>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
             <p>Masters in Business Administration, University of Florida</p>
             <p>Bachelor of Engineering, University College of Engineering, Osmania University</p>
         </ul>
-    </section>
+            </section>
+        </div>
+    </div>
+      <div class="divider"></div>
     <section id="projects">
         <h2>Projects</h2>
         <ul>

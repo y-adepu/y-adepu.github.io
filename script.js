@@ -18,3 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function toggleDetails(element) {
+    let details = element.querySelector(".timeline-details");
+
+    if (details.classList.contains("hidden")) {
+        document.querySelectorAll(".timeline-details").forEach((el) => {
+            el.classList.add("hidden");
+            el.classList.remove("active");
+        });
+
+        details.classList.remove("hidden");
+        details.classList.add("active");
+    } else {
+        details.classList.add("hidden");
+        details.classList.remove("active");
+    }
+}
+
+// Progress Bar Scroll Effect
+window.addEventListener("scroll", () => {
+    let timeline = document.querySelector(".timeline");
+    let progressBar = document.querySelector(".progress-bar");
+
+    let scrollWidth = timeline.scrollWidth - timeline.clientWidth;
+    let scrollLeft = timeline.scrollLeft;
+    let scrollPercentage = (scrollLeft / scrollWidth) * 100;
+
+    progressBar.style.width = `${scrollPercentage}%`;
+});

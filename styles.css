@@ -1,3 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(to bottom, #a0d8ef, #ffffff);
+}
+
+.divider {
+    width: 80%;
+    height: 1px;
+    background: gray;
+    margin: 10px auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: nowrap;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    background: #007bff;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.column {
+    flex: 1;
+}
+
+.split-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vertical-divider {
+    width: 1px;
+    background: gray;
+    height: 70%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.center {
+    text-align: center;
+}
+
+section {
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+    bottom: 2px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;      /* Align items vertically */
+    gap: 20px;                /* Space between elements */
+    flex-wrap: wrap;          /* Ensure responsiveness */
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    .vertical-divider {
+        display: none;
+        /* Hide it on smaller screens for better layout */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
 .dark-mode {
     background: #222;
     color: white;
@@ -46,65 +153,164 @@
     border-radius: 20px;
 }
 
-/* Circle inside slider */
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
 
-/* When checked, move the slider */
-input:checked + .slider {
-    background-color: #007bff;
-}
-
-input:checked + .slider:before {
-    transform: translateX(20px);
-}
-
-/* Rounded slider */
-.slider.round {
-    border-radius: 34px;
-}
-.contact-container {
+/* Timeline Container */
+.timeline-container {
     display: flex;
-    justify-content: center;  /* Center items horizontally */
-    align-items: center;      /* Align items vertically */
-    gap: 20px;                /* Space between elements */
-    flex-wrap: wrap;          /* Ensure responsiveness */
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
 }
 
-.contact-item {
-    padding: 10px 15px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s;
+/* Timeline Layout */
+.timeline {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    padding: 20px;
 }
 
-/* Hover effect for links */
-.contact-item a {
-    text-decoration: none;
-    color: black;
+/* Circular Design for Roles */
+.timeline-circle {
+    width: 120px;
+    height: 120px;
+    background: #007bff;
+    color: white;
+    font-size: 14px;
     font-weight: bold;
-    transition: color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
 }
 
-.contact-item a:hover {
+/* Circle Hover Effect */
+.timeline-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Position Year & Role inside Circle */
+.timeline-circle span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Special Highlight for Executive MBA */
+.highlighted .timeline-circle {
+    background: purple;
+    border: 2px solid gold;
+}
+
+/* Bullet Points Underneath Each Role */
+.timeline-details {
+    list-style-type: disc;
+    padding-left: 15px;
+    text-align: left;
+    max-width: 180px;
+    font-size: 14px;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Show details when active */
+.timeline-details.active {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Initially Hidden */
+.hidden {
+    display: none;
+}
+
+/* Arrows between circles */
+.arrow {
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Bouncing Animated Arrow */
+.arrow::after {
+    content: "➤";
+    position: absolute;
+    right: -10px;
+    top: -3px;
     color: #007bff;
+    font-size: 24px;
+    animation: bounceArrow 1.5s infinite ease-in-out;
 }
 
-/* Ensure responsiveness */
+/* Keyframe Animation */
+@keyframes bounceArrow {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+}
+
+/* Progress Bar Container */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 0%;
+    height: 8px;
+    background: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Make the timeline responsive */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
+    .timeline {
+        flex-direction: row;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+    }
+
+    .timeline-item {
+        min-width: 180px;
+    }
+
+    .arrow {
+        width: 30px;
+    }
+
+    .progress-bar-container {
+        height: 5px;
     }
 }

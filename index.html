@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yellappa Adepu</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-     <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,12 +15,14 @@
             transition: background 0.3s, color 0.3s;
             background: linear-gradient(to bottom, #a0d8ef, #ffffff);
         }
+
         .divider {
             width: 80%;
             height: 1px;
             background: gray;
             margin: 10px auto;
         }
+
         .nav {
             display: flex;
             justify-content: center;
@@ -27,6 +30,7 @@
             margin: 20px 0;
             flex-wrap: nowrap;
         }
+
         .nav a {
             text-decoration: none;
             padding: 10px 15px;
@@ -36,10 +40,12 @@
             transition: background 0.3s;
             white-space: nowrap;
         }
+
         .nav a:hover {
             background: #007bff;
             color: white;
         }
+
         .container {
             display: flex;
             justify-content: center;
@@ -49,103 +55,148 @@
             margin: auto;
             padding: 10px;
         }
+
         .column {
             flex: 1;
         }
+
         .split-column {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
+
         .vertical-divider {
             width: 1px;
             background: gray;
-            height: 80%;
-            position: absolute;
-            left: 50%;
+            height: 70%;
+            display: flex;
             transform: translateX(-50%);
         }
+
         .center {
             text-align: center;
         }
+
         section {
             padding: 10px;
             max-width: 800px;
             margin: auto;
+            bottom: 2px;
         }
+
         @media (max-width: 768px) {
             .nav {
                 flex-wrap: wrap;
+                justify-content: center;
+                overflow-x: auto;
             }
+
+            .vertical-divider {
+                display: none; /* Hide it on smaller screens for better layout */
+            }
+
             .container {
                 flex-direction: column;
                 align-items: center;
             }
+
             section {
                 padding: 15px;
             }
-        }
+}
+
     </style>
 </head>
+
 <body>
     <div class="center">
         <h1>Yellappa Adepu</h1>
     </div>
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>    
     <div class="divider"></div>
     <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#expertise">Competencies</a>
-        <a href="#projects">Work</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" aria-label="About"><strong>About</strong></a>
+        <a href="#expertise" aria-label="Competencies"><strong>Competencies</strong></a>
+        <a href="#projects" aria-label="Projects"><strong>Projects</strong></a>
+        <a href="#education" aria-label="Education"><strong>Education</strong></a>
+        <a href="#contact" aria-label="Contact"><strong>Contact</strong></a>
     </nav>
+    
     <div class="divider"></div>
     <div class="container">
         <div class="column">
             <section id="about">
-        <h2>About</h2>
-        <p>Transformational technology leader with a proven track record of driving digital innovation, aligning IT strategies with business objectives, and accelerating growth across healthcare, financial services, retail, and public sectors. With over two decades of experience, I excel in leading high-impact initiatives, optimizing IT operations, and orchestrating cross-functional teams to deliver sustainable value and operational excellence.
-        </p><p>
-As a recognized thought leader and trusted advisor to C-suite executives, I bring extensive expertise in application development, modernization, AI, data analytics, and cloud technologies, underpinned by a strategic, results-oriented approach to complex problem-solving. I design and implement technology roadmaps that enhance competitive positioning, drive revenue optimization, and enable resilient enterprise transformation.
-        </p><p>
-Passionate about cultivating high-performance teams and delivering innovative, scalable solutions that exceed business goals, Gained a deep understanding of IT management, product strategy, and lifecycle management to provide actionable insights that fuel growth and operational efficiencies.</p>
-    </section>
+                <h2>About</h2>
+                <p>Transformational technology leader with a proven track record of driving digital innovation, aligning
+                    IT strategies with business objectives, and accelerating growth across healthcare, financial
+                    services, retail, and public sectors. With over two decades of experience, I excel in leading
+                    high-impact initiatives, optimizing IT operations, and orchestrating cross-functional teams to
+                    deliver sustainable value and operational excellence.
+                </p>
+                <p>
+                    As a recognized thought leader and trusted advisor to C-suite executives, I bring extensive
+                    expertise in application development, modernization, AI, data analytics, and cloud technologies,
+                    underpinned by a strategic, results-oriented approach to complex problem-solving. I design and
+                    implement technology roadmaps that enhance competitive positioning, drive revenue optimization, and
+                    enable resilient enterprise transformation.
+                </p>
+                <p>
+                    Passionate about cultivating high-performance teams and delivering innovative, scalable solutions
+                    that exceed business goals, Gained a deep understanding of IT management, product strategy, and
+                    lifecycle management to provide actionable insights that fuel growth and operational efficiencies.
+                </p>
+            </section>
+
         </div>
-            <div class="vertical-divider"></div>
-         <div class="column split-column">
+        <div class="vertical-divider"></div>
+        <div class="column">
             <section id="expertise">
                 <h2>Competencies</h2>
-                <div>
-            <p>IT Strategy, Technology Roadmap Development & Execution</p>
-            <p>Digital Transformation & Innovation</p>
-            <p>People Leadership and Management</p>
-            <p>Enterprise Architecture and Cloud Adoption</p>
-            <p>Application Modernization, Gen AI, AI/ML, Data Analytics</p->
-        </div>
+                <ul>
+                    <li>IT Strategy, Technology Roadmap Development & Execution</li>
+                    <li>Digital Transformation & Innovation</li>
+                    <li>People Leadership and Management</li>
+                    <li>Enterprise Architecture and Cloud Adoption</li>
+                    <li>Application Modernization, Gen AI, AI/ML, Data Analytics</li>
+                </ul>
             </section>
-              <div class="divider"></div>
             <section id="education">
                 <h2>Education</h2>
                 <ul>
-            <p>Masters in Business Administration, University of Florida</p>
-            <p>Bachelor of Engineering, University College of Engineering, Osmania University</p>
-        </ul>
+                    <li>Masters in Business Administration, University of Florida</li>
+                    <li>Bachelor of Engineering, University College of Engineering, Osmania University</li>
+                </ul>
             </section>
         </div>
     </div>
-      <div class="divider"></div>
+    <div class="divider"></div>
     <section id="projects">
         <h2>Projects</h2>
         <ul>
-            <p></p>
+            <li>Developed AI-powered chatbots for customer engagement</li>
+            <li>Designed and implemented cloud migration strategies</li>
+            <li>Built data pipelines for real-time analytics</li>
         </ul>
     </section>
-   <div class="divider"></div>
+    
+    <div class="divider"></div>
     <section id="contact">
-        <h2>Contact</h2>
-        <p><a href="https://www.linkedin.com/in/yadepu/" target="_blank">LinkedIn</a></p>
-        <p>Email: <a href="mailto:yellappa.adepu@gmail.com">yellappa.adepu@gmail.com</a></p>
+        <div class="contact-container">
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/yadepu/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:yellappa.adepu@gmail.com">Email</a>
+            </div>
+        </div>
     </section>
+    
     </div>
 </body>
 </html>

@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yellappa Adepu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <div class="center">
+        <section>
         <h1>Yellappa Adepu</h1>
-    </div>
+        <div class="divider"></div>
+        <p class="left">Strategic and results-driven technology leader with a proven track record of driving business transformation
+            through innovative technology adoption. Expert in developing and executing technology strategies, roadmaps, and
+            AI-infused modernization initiatives that unlock business value. Adept at building and leading high-performing
+            engineering teams to deliver scalable, enterprise solutions. Deep expertise in developing technology strategies,
+            solving complex challenges, cloud adoption, migration, application modernization, application and data
+            platforms. Adept at leveraging AI and LLMs to enhance operational efficiency and competitive advantage.</p>
+        </section>
+        </div>
     <div class="dark-mode-toggle">
         <label class="switch">
             <input type="checkbox" id="darkModeToggle">
@@ -23,7 +34,7 @@
     <nav class="nav">
         <a href="#about" aria-label="About"><strong>About</strong></a>
         <a href="#expertise" aria-label="Competencies"><strong>Competencies</strong></a>
-        <a href="#projects" aria-label="Projects"><strong>Projects</strong></a>
+        <!-- <a href="#projects" aria-label="Projects"><strong>Projects</strong></a> -->
         <a href="#education" aria-label="Education"><strong>Education</strong></a>
         <a href="#contact" aria-label="Contact"><strong>Contact</strong></a>
     </nav>
@@ -54,16 +65,21 @@
             </section>
 
         </div>
-        <div class="vertical-divider"></div>
+        <div class="vertical-divider">
+            <i class="fas fa-diamond"></i>
+        </div>
+
         <div class="column">
             <section id="expertise">
                 <h2>Competencies</h2>
                 <ul>
-                    <li>IT Strategy, Technology Roadmap Development & Execution</li>
-                    <li>Digital Transformation & Innovation</li>
-                    <li>People Leadership and Management</li>
-                    <li>Enterprise Architecture and Cloud Adoption</li>
-                    <li>Application Modernization, Gen AI, AI/ML, Data Analytics</li>
+                    <li>IT strategy, technology roadmap development and execution</li>
+                    <li>People leadership and Organization development</li>
+                    <li>Digital transformation and Innovation</li>
+                    <li>Cloud adoption, migration and Cloud platforms</li>
+                    <li>Enterprise Architecture</li>
+                    <li>Application Modernization</li>
+                    <li>Gen AI, LLM, AI/ML, and Data analytics</li>
                 </ul>
             </section>
             <section id="education">
@@ -75,69 +91,7 @@
             </section>
         </div>
     </div>
-    <div class="divider"></div>
-    <div class="timeline-container">
-        <div class="timeline">
-            <div class="timeline-item" onclick="toggleDetails(this)">
-                <div class="timeline-circle">
-                    <span></span>
-                    <h3>Developer</h3>
-                </div>
-                <ul class="timeline-details hidden">
-                    <li>.</li>
-                    <li>.</li>
-                </ul>
-            </div>
-            <div class="arrow"></div>
-            <div class="timeline-item" onclick="toggleDetails(this)">
-                <div class="timeline-circle">
-                    <span></span>
-                    <h3>Architect</h3>
-                </div>
-                <ul class="timeline-details hidden">
-                    <li>.</li>
-                    <li>.</li>
-                </ul>
-            </div>
-            <div class="arrow"></div>
-            <div class="timeline-item" onclick="toggleDetails(this)">
-                <div class="timeline-circle">
-                    <span></span>
-                    <h3>IT Manager</h3>
-                </div>
-                <ul class="timeline-details hidden">
-                    <li>.</li>
-                    <li>.</li>
-                </ul>
-            </div>
-            <div class="arrow"></div>
-            <div class="timeline-item" onclick="toggleDetails(this)">
-                <div class="timeline-circle">
-                    <span></span>
-                    <h3>Sr IT Manager</h3>
-                </div>
-                <ul class="timeline-details hidden">
-                    <li><strong>.</li>
-                    <li><strong>.</li>
-                </ul>
-            </div>
-            <div class="arrow"></div>
-            <div class="timeline-item" onclick="toggleDetails(this)">
-                <div class="timeline-circle">
-                    <span></span>
-                    <h3>Director</h3>
-                </div>
-                <ul class="timeline-details hidden">
-                    <li><strong>.</li>
-                    <li><strong>.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-        <!-- Progress Bar -->
-        <div class="progress-bar-container">
-            <div class="progress-bar"></div>
-        </div>
+
     <div class="divider"></div>
     <section id="contact">
         <div class="contact-container">

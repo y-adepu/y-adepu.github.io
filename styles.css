@@ -26,12 +26,15 @@ h6 {
     /* color: #222; */
     /* Slightly darker for emphasis */
 }
+i {
+    font-size: 10px;
+}
 
 .divider {
     width: 80%;
     height: 1px;
     background: gray;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 /* Dark mode slider */
@@ -179,7 +182,7 @@ input:checked+.slider:before {
 }
 
 section {
-    padding: 10px;
+    padding: 5px;
     max-width: 800px;
     margin: auto;
     bottom: 2px;
